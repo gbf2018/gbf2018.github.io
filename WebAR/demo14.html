@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>与覆盖在 DOM 内容上的层进行交互</title>
+</head>
+<script src="js/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<body style="margin : 0px; overflow: hidden;">
+<a-scene embedded arjs>
+    <a-marker preset="hiro">
+        <a-entity
+                position="0 0 0"
+                scale="0.05 0.05 0.05"
+                gltf-model="model/gril/scene.gltf"
+        ></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
