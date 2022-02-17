@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<script src="../js/aframe-master.min.js"></script>
+<script src="../js/aframe-ar-nft.js"></script>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        .arjs-loader {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .arjs-loader div {
-            text-align: center;
-            font-size: 1.25em;
-            color: white;
-        }
-    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
+<style>
+    .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+    }
+</style>
 <body style="margin : 0px; overflow: hidden;">
 <!--图像加载前显示加载中...-->
 <div class="arjs-loader">
@@ -54,7 +53,4 @@
     <a-entity camera></a-entity>
 </a-scene>
 
-<script src="../js/aframe-master.min.js"></script>
-<script src="../js/aframe-ar-nft.js"></script>
 </body>
-</html>
