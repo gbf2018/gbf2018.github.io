@@ -1,0 +1,11 @@
+Model Information:
+* title:	百代小红楼
+* source:	https://sketchfab.com/3d-models/2b1aca1d3f134a678d792dd910599884
+* author:	jingjing-haili (https://sketchfab.com/jingjing-haili)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "百代小红楼" (https://sketchfab.com/3d-models/2b1aca1d3f134a678d792dd910599884) by jingjing-haili (https://sketchfab.com/jingjing-haili) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
