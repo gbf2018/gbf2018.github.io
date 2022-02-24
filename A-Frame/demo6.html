@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义组件-在JS中使用组件</title>
+    <script src="js/1.3.0/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent('hello-world', {
+            init: () => {
+                console.log('Hello, JS！')
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <a-scene>
+    </a-scene>
+<script>
+    document.querySelector('a-scene').setAttribute('hello-world', '')
+</script>
+</body>
+</html>

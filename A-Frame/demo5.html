@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义组件-在HTML中使用组件</title>
+    <script src="js/1.3.0/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent('hello-world', {
+            init: () => {
+                console.log('Hello, Html！')
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <a-scene>
+        <a-entity hello-world></a-entity>
+    </a-scene>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义组件-从生命周期处理器（Lifecycle Handler）中使用属性数据</title>
+    <script src="js/1.3.0/aframe.min.js"></script>
+    <script>
+        const _this = this
+        AFRAME.registerComponent('hello', {
+            schema: {
+              message: { type: 'string', default: 'hello, Js!' }
+            },
+            init: function () {
+                console.log(this.data.message);
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <a-scene>
+        <a-entity hello="message: china"></a-entity>
+    </a-scene>
+</body>
+</html>

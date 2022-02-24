@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义组件-属性更新</title>
+    <script src="js/1.3.0/aframe.min.js"></script>
+    <script>
+        const _this = this
+        AFRAME.registerComponent('hello', {
+            schema: {
+                event: {type: 'string', default: ''},
+              message: { type: 'string', default: 'hello, Js!' }
+            },
+            init: function () {
+                // Closure to access fresh `this.data` from event handler context.
+                var self = this;
+                // .init() is a good place to set up initial state and variables.
+                // Store a reference to the handler so we can later remove it.
+                this.eventHandlerFn = function () { console.log(self.data.message); };
+            },
+            update: function (oldData) {
+                var data = this.data;  // Component property values.
+                var el = this.el;  // Reference to the component's entity.
+                if (oldData.event && data.event !== oldData.event) {
+                    el.removeEventListener(oldData.event, this.eventHandlerFn);
+                }
+                if (data.event) {
+                    // This will log the `message` when the entity emits the `event`.
+                    el.addEventListener(data.event, function () {
+                        console.log(data.message);
+                    });
+                } else {
+                    // `event` not specified, just log the message.
+                    console.log(data.message);
+                }
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <a-scene>
+        <a-entity hello="event: anEvent;message: china"></a-entity>
+    </a-scene>
+<script>
+    var el = document.querySelector('a-entity');
+    el.emit('anEvent');
+
+    el.setAttribute('hello', {event: 'anotherEvent', message: 'Hello, new event!'});
+    el.emit('anotherEvent');
+</script>
+</body>
+</html>
