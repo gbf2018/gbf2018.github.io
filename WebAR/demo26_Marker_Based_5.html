@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="js/aframe.min.js"></script>
+<!-- we import arjs version without NFT but with marker + location based support -->
+<script src="js/aframe-ar.js"></script>
+<script>
+    THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
+</script>
+<body style="margin : 0px; overflow: hidden;">
+<a-scene embedded artoolkit="sourceType: webcam;">
+    <a-box position="0 0.5 0" material="opacity: 1;"></a-box>
+    <a-entity
+            gltf-model="model/loufang/scene.gltf"
+            scale="2 2 2"
+            position="0 0 0"
+    >
+    </a-entity>
+    <a-marker-camera preset="hiro">
+    </a-marker-camera>
+</a-scene>
+</body>
+</html>
